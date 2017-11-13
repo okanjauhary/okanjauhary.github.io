@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mohammad Shulhan Jauhary | Portofolio</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="font-awesome.min.css">
+	<link rel="shortcut icon" href="images/my_icon.png">
+</head>
+<body>
+<div class="container">
+	<div class="sidebar-left">
+		<img src="desain/fotoku.png" alt="">
+	</div>
+	<div class="sidebar-right">
+		<ul class="menu">
+			<li class="active"><a href="#" data-url="home.html">HOME</a></li>
+			<li><a href="#" data-url="profile.html">PROFILE</a></li>
+			<li><a href="#" data-url="education.html">EDUCATION</a></li>
+			<li><a href="#" data-url="skills.html">SKILLS</a></li>
+			<li><a href="#" data-url="contact.html">CONTACT</a></li>
+		</ul>
+		<div style="clear: both;"></div>
+		<div class="content"></div>
+		<div class="loading">
+			<font size="20pt" color="white">Loading....</font>
+		</div>
+		<footer class="footer">
+			<p>Designed by @sulhanjauhary</p>
+			<ul class="sosmed">
+				<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fa fa-github"></i></a></li>
+			</ul>
+		</footer>
+	</div>	
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+    // $(window).load(function(){$('#loader').slideUp();});
+    var height = $(window).height();
+    $('.container').css('height', height);
+    $(document).ready(function() {
+    	$('.content').load('pages/home.html');
+    	$('.menu li a').not('.active').click(function(e) {
+    		if($(this).parent().hasClass('active')){
+    			return false;
+    		}else{
+		    	e.preventDefault();
+		    	var url = 'pages/' + $(this).attr('data-url');
+		    	var el = $(this);
+		    	$('.content').html('');
+		    	$('.loading').fadeIn('fast');
+		    	setTimeout(function() {
+		    		el.parents('ul').find('li').removeClass('active');
+		    		el.parent().addClass('active');
+		    		$('.loading').hide();
+		    		$('.content').load(url, function(res, status, xhr) {
+		    			if(status == "error"){
+		    				$('.content').append('<div class="home"><h3>The portofolio of</h3><h2>MOHAMMAD</h2><h2>SHULHAN</h2><h2>JAUHARI</h2></div>');
+		    				console.log("Page Not Found");
+		    			}
+		    		});
+		    	},1000);
+	    	}
+	    });
+    });
+    
+</script>
+
+</body>
+</html>
