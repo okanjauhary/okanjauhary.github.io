@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 *{margin: 0;padding: 0;}
 body{font-family: sans-serif;background: #111;}
@@ -115,7 +115,7 @@ body{font-family: sans-serif;background: #111;}
 	font-style: italic;
 }
 .content .home h2{
-	font-family: 'Raleway', serif;
+	font-family: 'Poiret One', sans-serif;
 	font-size: 5rem;
 	color: #fff;
 }
