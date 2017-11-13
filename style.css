@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 *{margin: 0;padding: 0;}
 body{font-family: sans-serif;background: #111;}
 /*basic*/
@@ -107,13 +109,13 @@ body{font-family: sans-serif;background: #111;}
 	padding-top: 50px;
 }
 .content .home h3{
-	font-family: cursive;
+	font-family: 'Kaushan Script', cursive;
 	color: #B3B3B3;
 	font-size: 2rem;
 	font-style: italic;
 }
 .content .home h2{
-	font-family: sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
 	font-size: 5rem;
 	color: #fff;
