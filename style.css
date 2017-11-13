@@ -111,12 +111,13 @@ body{font-family: sans-serif;background: #111;}
 .content .home h3{
 	font-family: 'Kaushan Script', cursive;
 	color: #B3B3B3;
-	font-size: 2rem;
-	font-style: italic;
+	font-size: 2.2rem;
 }
 .content .home h2{
 	font-family: 'Poiret One', sans-serif;
-	font-size: 5rem;
+	font-size: 5.7rem;
+	font-weight: 100;
+	letter-spacing: 3px;
 	color: #fff;
 }
 
