@@ -1,7 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Poiret+One');
-@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/*@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');*/
+/*@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');*/
 *{margin: 0;padding: 0;}
-body{font-family: sans-serif;background: #111;}
+body{
+	font-family: sans-serif;
+	background: #111;
+}
 /*basic*/
 .container{
 	position: relative;
@@ -99,8 +104,8 @@ body{font-family: sans-serif;background: #111;}
 .loading{
 	position: absolute;
 	z-index: 999;
-	top: 15em;
-	right: 20em;
+	top: 18em;
+	right: 50%;
 	display: none;
 }
 
@@ -111,11 +116,11 @@ body{font-family: sans-serif;background: #111;}
 .content .home h3{
 	font-family: 'Kaushan Script', cursive;
 	color: #B3B3B3;
-	font-size: 2.2rem;
+	font-size: 40px;
 }
 .content .home h2{
 	font-family: 'Poiret One', sans-serif;
-	font-size: 5.7rem;
+	font-size: 90px;
 	font-weight: 100;
 	letter-spacing: 3px;
 	color: #fff;
@@ -159,8 +164,9 @@ body{font-family: sans-serif;background: #111;}
 	display: block;
 	margin-bottom: 50px;
 	position: relative;
-	padding: 10px 20px 20px 50px;
+	padding: 10px 20px 20px 70px;
 	background-color: white;
+	border-bottom-left-radius: 50px;
 	border-top-right-radius: 50px;
 }
 .content .education .body .item h2{
@@ -191,10 +197,124 @@ body{font-family: sans-serif;background: #111;}
 	color: #fff;
 }
 
+/* SKILLS*/
+.content .skills .body .info span{
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 0px;
+	font-size: 4rem;
+	color: white;
+
+}
+.content .skills .body .info p{
+	color: #fff;
+	font-size: 1.3rem;
+	line-height: 2.1rem;
+}
+.content .skills .rate{
+	margin-top: 30px;
+}
+.content .skills .rate .item{
+	position: relative;
+	z-index: 99;
+	width: 95%;
+	background-color: #234A23;
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+.content .skills .rate .item:before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 998;
+	height: 100%;
+	background-color: green;
+	background-image: linear-gradient(90deg, rgba(0,255,0,0) 50%, #17C50A 110%);
+}
+.content .skills .rate .item h2{
+	position: relative;
+	z-index: 1000;
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	margin-left: 20px;
+}
+/* data progress */
+.content .skills .rate .item[data-rate=html]:before{
+	width: 85%;
+}
+.content .skills .rate .item[data-rate=css]:before{
+	width: 90%;
+}
+.content .skills .rate .item[data-rate=js]:before{
+	width: 75%;
+}
+.content .skills .rate .item[data-rate=php]:before{
+	width: 70%;
+}
+.content .skills .rate .item[data-rate=mysql]:before{
+	width: 60%;
+}
+.content .skills .rate .item[data-rate=bs]:before{
+	width: 80%;
+}
+.content .skills .rate .item[data-rate=jq]:before{
+	width: 75%;
+}
+.content .skills .rate .item[data-rate=ci]:before{
+	width: 70%;
+}
+
+/* CONTACT */
+.content .contact .body .item{
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+.content .contact .body .item .info{
+	height: 100%;
+	padding: 5px;
+	overflow: hidden;
+}
+.content .contact .body .item .info h3{
+	color: #fff;
+	font-size: 1.5rem;
+	border-bottom: 1px solid white;
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+.content .contact .body .item .info p{
+	color: #A8A8A8;
+	font-size: 1.2rem;
+	font-style: italic;
+}
+.content .contact .body ul.item-sosmed{
+	display: block;
+	margin-top: 30px;
+	list-style: none;
+	padding-left: 0;
+}
+.content .contact .body ul.item-sosmed li{
+	margin-bottom: 20px;
+}
+.content .contact .body ul.item-sosmed li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.3rem;
+}
+.content .contact .body ul.item-sosmed li a i.fa-external-link-square{
+	position: relative;
+	top: -.2em;
+	left: .5em;
+	font-size: .9rem;
+}
+
 /* FOOTER */
 
 footer.footer{
 	position: fixed;
+	z-index: 1001;
 	bottom: 0;
 	width: 100%;
 	padding: 10px 25px;
