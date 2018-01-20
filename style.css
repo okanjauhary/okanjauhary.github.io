@@ -240,19 +240,19 @@ body{
 }
 /* data progress */
 .content .skills .rate .item[data-rate=html]:before{
-	width: 85%;
+	width: 90%;
 }
 .content .skills .rate .item[data-rate=css]:before{
-	width: 90%;
+	width: 93%;
 }
 .content .skills .rate .item[data-rate=js]:before{
 	width: 75%;
 }
 .content .skills .rate .item[data-rate=php]:before{
-	width: 70%;
+	width: 80%;
 }
 .content .skills .rate .item[data-rate=mysql]:before{
-	width: 60%;
+	width: 70%;
 }
 .content .skills .rate .item[data-rate=bs]:before{
 	width: 80%;
