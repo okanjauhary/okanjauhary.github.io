@@ -3,99 +3,21 @@
 <head>
 	<title>Mohammad Shulhan Jauhary | Portofolio</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="font-awesome.min.css">
-	<link rel="stylesheet" href="line-spin-fade-rotating.min.css">
-	<link rel="shortcut icon" href="images/my_icon.png">
+	<link rel="stylesheet" href="loading.css">
 </head>
 <body>
 <div class="container">
-	<div class="sidebar-left">
-		<img src="images/fotoku.png" alt="">
-	</div>
-	<div class="sidebar-right">
-		<ul class="menu">
-			<li class="active"><a href="#" data-url="home.html">HOME</a></li>
-			<li><a href="#" data-url="profile.html">PROFILE</a></li>
-			<li><a href="#" data-url="education.html">EDUCATIONS</a></li>
-			<li><a href="#" data-url="skills.html">SKILLS</a></li>
-			<li><a href="#" data-url="contact.html">CONTACT</a></li>
-		</ul>
-		<div style="clear: both;"></div>
-		<div class="content"></div>
-		<div class="loading">
-			<div class="la-line-spin-fade-rotating la-2x">
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
+	<div class="loading">
+		<div class="la-ball-climbing-dot la-dark la-3x">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
-		<footer class="footer">
-			<p>Designed by @sulhanjauhary</p>
-			<ul class="sosmed">
-				<li><a href="https://facebook.com/jauhary.yuuka" target="_blank"><i class="fa fa-facebook"></i></a></li>
-				<li><a href="https://twitter.com/sulhanjauhari" target="_blank"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="http://utes.ml" target="_blank"><i class="fa fa-globe"></i></a></li>
-				<li><a href="https://github.com/sulhanjauhari" target="_blank"><i class="fa fa-github"></i></a></li>
-			</ul>
-		</footer>
-	</div>	
+	</div>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!-- <script src="../jquery.nicescroll.min.js"></script>  -->
-
-<script type="text/javascript">
-    // $(window).load(function(){$('#loader').slideUp();});
-    var height = $(window).height();
-    $('.container').css('height', height);
-    $(document).ready(function() {
-    	// $('html').niceScroll({
-    	// 	autohidemode : 'leave',
-    	// 	cursorcolor : '#878787',
-    	// 	cursorborder : 'none'
-    	// });
-    	$('.content').load('pages/home.html');
-    	$('.menu li a').not('.active').click(function(e) {
-    		if($(this).parent().hasClass('active')){
-    			return false;
-    		}else{
-		    	e.preventDefault();
-		    	var url = 'pages/' + $(this).attr('data-url');
-		    	var el = $(this);
-		    	$('.content').html('').hide();
-		    	$('.loading').fadeIn('fast');
-		    	setTimeout(function() {
-		    		el.parents('ul').find('li').removeClass('active');
-		    		el.parent().addClass('active');
-		    		$('.loading').hide();
-		    		$('.content').fadeIn(1500).load(url, function(res, status, xhr) {
-		    			if(status == "error"){
-		    				$('.content').append('<div class="home"><h3>The portofolio of</h3><h2>MOHAMMAD</h2><h2>SHULHAN</h2><h2>JAUHARI</h2></div>');
-		    				console.log("Page Not Found");
-		    			}
-		    		});
-		    	},1000);
-	    	}
-	    });
-
-    	// change gear color
-	    var color = ['#fff','#B6F0D4','#B6DCF0', '#CBCDFF', '#E3CBFF','#FFE5F2','#DDDDDD'];
-	    setInterval(function() {
-	    	var ran = Math.floor(Math.random()*color.length);
-	    	$('.skills .fa-gear').css({
-	    		'color' 	 : color[ran],
-	    		'transition' : '1.2s'
-	    	});
-	    }, 5000);
-
-    });
-    
-</script>
-
+<h4 class="copyright">
+	copyright &copy; 2018 in development
+</h4>
 </body>
 </html>

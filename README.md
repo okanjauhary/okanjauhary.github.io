@@ -1,4 +1,4 @@
-Ini Portofolio saya
+My Portfolio
 ===================
 
-ini repo pertama saya
+## in development...
