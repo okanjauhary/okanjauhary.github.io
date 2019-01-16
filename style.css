@@ -7,12 +7,13 @@
 html, body {
 	outline: none;
 	background-color: 'whitesmoke';
-	font-family: sans-serif;
+	font-family: "Lato", sans-serif;
+	overflow: hidden;
 }
 
-.loading {
+.align-center {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	left: 50%;
 	z-index: 99999;
 	transform: translate(-50%, -50%)
@@ -35,4 +36,15 @@ html, body {
 	transform: translateX(-50%);
 	color: #aaa;
 	font-weight: 100;
+}
+
+.text-split{
+	opacity: .7;
+	font-size: 2.3rem;
+	color: white;
+}
+
+span.each-word {
+	transition: all 2.5s linear;
+	position: relative;
 }
