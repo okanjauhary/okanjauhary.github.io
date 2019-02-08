@@ -48,3 +48,23 @@ span.each-word {
 	transition: all 2.5s linear;
 	position: relative;
 }
+
+span.each-word.fade-out{
+	animation: fadeOut 2.6s linear
+}
+
+span.each-word.fade-in{
+	animation: fadeIn 2.6s linear
+}
+
+@keyframes fadeOut{
+	0%{ opacity: 1 }
+	70%{ opacity: .2 }
+	100%{ opacity: 0 }
+}
+
+@keyframes fadeIn{
+	0%{ opacity: 0 }
+	60%{ opacity: .3 }
+	100%{ opacity: 1 }
+}

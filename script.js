@@ -44,35 +44,32 @@ var quotes = [
 ];
 
 $(document).ready(function(){
-    // var num = 0;
-    // while(true){
-    //     if(num <= word.length){
-    //         num = 0
-    //     }
-    //     setTimeout(function(){
-    //         splitting('.text-split', word[num])
-    //         num += 1
-    //     }, 3000)
-    // }
+    $(this).click(() => {
+        splitting('.text-split', quotes[Math.floor(Math.random()*quotes.length)])
+    })
     splitting('.text-split', quotes[Math.floor(Math.random()*quotes.length)])
+    setInterval(() => {
+        splitting('.text-split', quotes[Math.floor(Math.random()*quotes.length)])
+    }, 15000)
 })
 
 function splitting(el, quote){
-    $(el).hide()
-    $(el).each(function() {
-        quote.content = '“' + quote.content + '”' + '#— ' + quote.author
+    let content, a
+    $(el).text("").html("")
 
-        var a = quote.content.split(' ').join('~');
+    $(el).each(function() {
+        content = '“' + quote.content + '”' + '#— ' + quote.author
+        a = content.split(' ').join('~')
       
-        for(var i = 0; i < a.length; i+= 1) {
+        for(let i = 0; i < a.length; i+= 1) {
             if(a[i] !== '~'){
                 if(a[i+1] === '~'){
-                    $(this).append($('<span class="each-word">').text(a[i]+' '));
+                    $(this).append($('<span class="each-word fade-in">').text(a[i]+' '));
                 }else{
                     if(a[i] === '#'){
                         $(this).append('<br><br>');
                     }else{
-                        $(this).append($('<span class="each-word">').text(a[i]));
+                        $(this).append($('<span class="each-word fade-in">').text(a[i]));
                     }
                     
                 }
@@ -81,18 +78,28 @@ function splitting(el, quote){
         
     })
     
-    var elems = $('span.each-word');
-    var position = ['top', 'left'];
-    var min = ['-', '', '-', '', '-', ''];
+    let elems = $('span.each-word');
+    let position = ['top', 'left'];
+    let min = ['-', '', '-', '', '-', ''];
     
-    for(var i = 0; i < elems.length; i += 1) {
+    for(let i = 0; i < elems.length; i += 1) {
       elems[i].style.cssText = position[Math.floor(Math.random()*position.length)] + ': ' + min[Math.floor(Math.random()*min.length)] + Math.random() * 1000+'px'
     }
-
-    $(el).show();
     
-    setTimeout(function() {
+    setTimeout(() => {
         $('span.each-word').css('top', 0);
         $('span.each-word').css('left', 0);
     }, 300)
+
+    setTimeout(() => {
+        elems.removeClass('fade-in')
+        elems.addClass('fade-out')
+        let randomLef, rnum
+        let arah = min[Math.floor(Math.random()*min.length)]
+        for(let i = 0; i < elems.length; i += 1) {
+            rnum = (Math.random() * 3320)
+            randomLeft = rnum < 1200 ? 1200 + Math.random() * 40 : rnum
+            elems[i].style.cssText = 'left : ' + arah + randomLeft + 'px'
+        }
+    }, 12000)
 }
