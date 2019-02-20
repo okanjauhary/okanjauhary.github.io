@@ -50,7 +50,7 @@ $(document).ready(function(){
     splitting('.text-split', quotes[Math.floor(Math.random()*quotes.length)])
     setInterval(() => {
         splitting('.text-split', quotes[Math.floor(Math.random()*quotes.length)])
-    }, 15000)
+    }, 14700)
 })
 
 function splitting(el, quote){
@@ -94,12 +94,8 @@ function splitting(el, quote){
     setTimeout(() => {
         elems.removeClass('fade-in')
         elems.addClass('fade-out')
-        let randomLef, rnum
-        let arah = min[Math.floor(Math.random()*min.length)]
         for(let i = 0; i < elems.length; i += 1) {
-            rnum = (Math.random() * 3320)
-            randomLeft = rnum < 1200 ? 1200 + Math.random() * 40 : rnum
-            elems[i].style.cssText = 'left : ' + arah + randomLeft + 'px'
+            elems[i].style.cssText = position[Math.floor(Math.random()*position.length)] + ': ' + min[Math.floor(Math.random()*min.length)] + Math.random() * 1000+'px'
         }
     }, 12000)
 }

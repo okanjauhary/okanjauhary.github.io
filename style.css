@@ -6,7 +6,7 @@
 
 html, body {
 	outline: none;
-	background-color: 'whitesmoke';
+	background-color: whitesmoke;
 	font-family: "Lato", sans-serif;
 	overflow: hidden;
 }
@@ -50,11 +50,11 @@ span.each-word {
 }
 
 span.each-word.fade-out{
-	animation: fadeOut 2.6s linear
+	animation: fadeOut 2.6s forwards linear
 }
 
 span.each-word.fade-in{
-	animation: fadeIn 2.6s linear
+	animation: fadeIn 2.6s forwards linear
 }
 
 @keyframes fadeOut{
